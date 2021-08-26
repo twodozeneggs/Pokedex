@@ -1,5 +1,4 @@
 //pokedex... my favourite seven 
-let pokemonRepository = (function() { 
 let PokemonList = [
 {
     name: 'Quagsire',
