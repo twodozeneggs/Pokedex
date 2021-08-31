@@ -37,18 +37,11 @@ let PokemonList = [
 }
 ];
 
-for (let i = 0; i < PokemonList.length; i++) {
-    let reaction = "";
-    let PokemonHeight = pokemonList[i].height;
-
-    if (PokemonHeight < 1) {
-        reaction =  "Wow what a cutie!";
-    } else if (PokemonHeight >1 && PokemonHeight <= 5){
-        reaction = "This one is pretty big";
+for (let i = 0; i < PokemonList.length; i++){
+    if(pokemonList[i].height >= 2){
+        document.write(pokemonList[i].name + " ( " + "height " + pokemonList[i].height + ") " + "-Wow that's big! <br />");
     }
-    document.write(
-        pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') - '+ reaction + '<br>'
-    );
-
+    else{
+        document.write(pokemonList[i] + " ( " + "height " + pokemonList[i].height + ") <br />");
     }
-
+    }
