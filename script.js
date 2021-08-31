@@ -2,7 +2,7 @@
 let PokemonList = [
 {
     name: 'Quagsire',
-    height: 1.4,
+    height: 7.4,
     types: ['water', 'ground'] 
 },
 {
@@ -17,7 +17,7 @@ let PokemonList = [
 },
 {
     name: 'Haunter',
-    height: 1.6,
+    height: 0.8,
     types: ['posion', 'ghost']
 },
 {
@@ -32,16 +32,25 @@ let PokemonList = [
 },
 {
     name: 'Krokorok',
-    height: 1,
+    height: 4.5,
     types: ['ground', 'dark']
 }
 ];
 
-for (let i = 0; i < PokemonList.length; i++){
-    if(pokemonList[i].height >= 2){
-        document.write(pokemonList[i].name + " ( " + "height " + pokemonList[i].height + ") " + "-Wow that's big! <br />");
+for (let i = 0; i < PokemonList.length; i++) {
+    let reaction = ""; //start var reaction
+    let pokemonheight = pokemonlist[i].height;
+
+    if(pokemonList[i].height < 2){
+        reaction = "oh thats cute!" //reaction height when the pokemon height is less than 2m
+    }   else if (pokemonHeight > 2 && pokemonHeight <= 4){
+        reaction = "This one is big <br />"; // reaction when height is between 2m and 4m   
+    } else {
+        reaction = "That's not fitting inside"; // reaction if height is larger than 4m
     }
-    else{
-        document.write(pokemonList[i] + " ( " + "height " + pokemonList[i].height + ") <br />");
+        document.write(
+        (pokemonList[i].name + " ( " + "height: " + pokemonList[i].height + ") - " + reaction "<br />"); //sending HTML the pokemon's name, height and reaction 
     }
-    }
+
+    
+
