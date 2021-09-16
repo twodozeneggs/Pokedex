@@ -1,5 +1,5 @@
 //pokedex... my favourite seven 
-let PokemonList = [
+let pokemonList = [
 {
     name: 'Quagsire',
     height: 7.4,
@@ -37,19 +37,18 @@ let PokemonList = [
 }
 ];
 
-for (let i = 0; i < PokemonList.length; i++) {
+for (let i = 0; i < pokemonList.length; i++) {
     let reaction = ""; //start var reaction
-    let pokemonheight = pokemonlist[i].height;
+    let pokemonheight = pokemonList[i].height;
 
     for (let i=0; i < pokemonList.length; i++){
         if(pokemonList[i].height >= 2){
-        document.write(pokemonList[i].name + " (" + "height " + pokemonList[i].height + ") " + "- Wow thats big! <br />");
+            document.write(pokemonList[i].name + " (" + "height " + pokemonList[i].height + ") " + "- Wow thats big! <br />");
         }else{
-        document.write(pokemonList[i].name + " (" + "height " + pokemonList[i].height + ") <br />");
+            document.write(pokemonList[i].name + " (" + "height " + pokemonList[i].height + ") <br />");
         }
-        }
-
-  
+    }
+}
   
   
   
