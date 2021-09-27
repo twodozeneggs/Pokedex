@@ -1,86 +1,80 @@
 //pokedex... my favourite seven 
 let pokemonRepository = (function () {
 
-let pokemonList = [
-{
-    name: 'Quagsire',
-    height: 7.4,
-    types: ['water', 'ground'] 
-},
-{
-    name: 'Arcanine',
-    height: 1.9,
-    types: ['fire'],
-},
-{
-    name: 'Breloom',
-    height: 1.2,
-    types: ['grass', 'fighting']
-},
-{
-    name: 'Haunter',
-    height: 0.8,
-    types: ['posion', 'ghost']
-},
-{
-    name: 'Dragonite',
-    height: 2.2,
-    types: ['dragon', 'flying']
-},
-{
-    name: 'Armaldo',
-    height: 1.5,
-    types: ['bug', 'rock']
-},
-{
-    name: 'Krokorok',
-    height: 4.5,
-    types: ['ground', 'dark']
-}
-];
-
-function getAll() {
-    return pokemonList;
-}
-function add(item) {
-    return pokemonList.push(item);
-}
-
-for (let i = 0; i < pokemonList.length; i++) {
-    let pokemonName = pokemonList[i].name; //start var reaction
-    let pokemonheight = pokemonList[i].height;
-    return {
+    let pokemonList = [
+    {
+        name: 'Quagsire',
+        height: 7.4,
+        types: ['water', 'ground'] 
+    },
+    {
+        name: 'Arcanine',
+        height: 1.9,
+        types: ['fire'],
+    },
+    {
+        name: 'Breloom',
+        height: 1.2,
+        types: ['grass', 'fighting']
+    },
+    {
+        name: 'Haunter',
+        height: 0.8,
+        types: ['posion', 'ghost']
+    },
+    {
+        name: 'Dragonite',
+        height: 2.2,
+        types: ['dragon', 'flying']
+    },
+    {
+        name: 'Armaldo',
+        height: 1.5,
+        types: ['bug', 'rock']
+    },
+    {
+        name: 'Krokorok',
+        height: 4.5,
+        types: ['ground', 'dark']
+    }
+    ];
+    
+    function getAll() {
+        return pokemonList;
+    }
+    function add(item) {
+        return pokemonList.push(item);
+    }
+    return{
         getAll: getAll,
         add: add,
     };
-});
 
-pokemonRepository.getAll().forEach (function (pokemon) {
-    let pokemonName = pokemon.name;
-    let pokemonheight = pokemon.height;
+})();
+for (let i = 0; i < pokemonRepository.getAll().length; i++) {
+    let pokemonList = pokemonRepository.getAll();
+    let pokemonName = pokemonList[i].name; //start var reaction
+    let pokemonHeight = pokemonList[i].height;
 
-    if (pokemonList[i].height >= 2) {
+    if (pokemonHeight >= 2) {
         document.write(
-
-        for (let i=0; i < pokemonList.length; i++) {
-            "- Thats a big one!" +
+            '<p>' + pokemonName + '' +'(height: ' + pokemonHeight + ')' +
+            ' - Thats a big one!' +
             '</p>'
-        );
+        )
+    }
+    else {
+        document.write(
+            '<p>' + pokemonName + '' +'(height: ' + pokemonHeight + ')' +
+            ' - Thats pretty small' +
+            '</p>'
+        )
+    };
+};
 
-        console.log(
-            pokemonName +
-            '' +
-            '(Height: ' +
-            pokemonheight +
-            ')' +
-            " - Thats a big one!"
-        );
-        } else {
-            document.write(
-                "<p>" + pokemonList[i].name + " (" + "height " + pokemonList[i].height + ") " + "- Wow thats big! <br />")
-             console.log(pokemonList[i].name + " " + "(height: " + pokemonheight + ") ");
-        }
-    }  
+// p
+
+       
     //  if(pokemonList[i].height < 2){
    //     reaction = "oh thats cute! <br />" //reaction height when the pokemon height is less than 2m
     //}   else if (pokemonHeight > 2 && pokemonHeight <= 4){
@@ -90,4 +84,12 @@ pokemonRepository.getAll().forEach (function (pokemon) {
     //}
         //document.write(
         //(pokemonList[i].name + " ( " + "height: " + pokemonList[i].height + ") - " + reaction <br />"); //sending HTML the pokemon's name, height and reaction 
-    // }
+    // 
+    //console.log(
+        //pokemonName +
+        //'' +
+        //'(Height: ' +
+        //pokemonheight +
+       // ')' +
+        // " - Thats a big one!"}
+    //}
