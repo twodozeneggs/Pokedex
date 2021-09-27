@@ -1,4 +1,6 @@
 //pokedex... my favourite seven 
+let pokemonRepository = (function () {
+
 let pokemonList = [
 {
     name: 'Quagsire',
@@ -37,21 +39,48 @@ let pokemonList = [
 }
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-    let reaction = ""; //start var reaction
-    let pokemonheight = pokemonList[i].height;
-
-    for (let i=0; i < pokemonList.length; i++){
-        if(pokemonList[i].height >= 2){
-            document.write(pokemonList[i].name + " (" + "height " + pokemonList[i].height + ") " + "- Wow thats big! <br />");
-        }else{
-            document.write(pokemonList[i].name + " (" + "height " + pokemonList[i].height + ") <br />");
-        }
-    }
+function getAll() {
+    return pokemonList;
 }
-  
-  
-  
+function add(item) {
+    return pokemonList.push(item);
+}
+
+for (let i = 0; i < pokemonList.length; i++) {
+    let pokemonName = pokemonList[i].name; //start var reaction
+    let pokemonheight = pokemonList[i].height;
+    return {
+        getAll: getAll,
+        add: add,
+    };
+});
+
+pokemonRepository.getAll().forEach (function (pokemon) {
+    let pokemonName = pokemon.name;
+    let pokemonheight = pokemon.height;
+
+    if (pokemonList[i].height >= 2) {
+        document.write(
+
+        for (let i=0; i < pokemonList.length; i++) {
+            "- Thats a big one!" +
+            '</p>'
+        );
+
+        console.log(
+            pokemonName +
+            '' +
+            '(Height: ' +
+            pokemonheight +
+            ')' +
+            " - Thats a big one!"
+        );
+        } else {
+            document.write(
+                "<p>" + pokemonList[i].name + " (" + "height " + pokemonList[i].height + ") " + "- Wow thats big! <br />")
+             console.log(pokemonList[i].name + " " + "(height: " + pokemonheight + ") ");
+        }
+    }  
     //  if(pokemonList[i].height < 2){
    //     reaction = "oh thats cute! <br />" //reaction height when the pokemon height is less than 2m
     //}   else if (pokemonHeight > 2 && pokemonHeight <= 4){
