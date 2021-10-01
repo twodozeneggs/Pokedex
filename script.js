@@ -38,7 +38,40 @@ let pokemonRepository = (function () {
         types: ['ground', 'dark']
     }
     ];
+
+    function addListitem(pokemon) {
+
+        let pokemonName = pokemon.name; //start var reaction
+        let pokemonHeight = pokemon.height;
+
+        //Find Unordered list in index.html
+        let ulItem = document.querySelector('.pokemon-list');
+        // Create a list item in unordered list
+        let liItem = document.createElement('li');
+        
+        // create button and add class
+        let button = document.createElement('button');
+        button.innerText = pokemonName;
+        button.classList.add('.button-list');
+
+        // Add button to list item
+        liItem.appendChild(button);
+        // Add list item to Unordered list
+        ulItem.appendChild(liItem);
+
+        addEventListener(button, pokemon)
+        
+    }
+    function showDetails(pokemon) {
+        console.log(pokemon)
+    }
     
+    function addEventListener(button, pokemon) {
+        button.addEventListener('click', function() {
+            showDetails(pokemon);
+
+        })
+    }
     function getAll() {
         return pokemonList;
     }
@@ -48,48 +81,14 @@ let pokemonRepository = (function () {
     return{
         getAll: getAll,
         add: add,
+        addListitem: addListitem,
     };
-
 })();
 for (let i = 0; i < pokemonRepository.getAll().length; i++) {
-    let pokemonList = pokemonRepository.getAll();
-    let pokemonName = pokemonList[i].name; //start var reaction
-    let pokemonHeight = pokemonList[i].height;
+    let pokemonList = pokemonRepository.getAll()
+    let pokemon = pokemonList[i];
+    
+    pokemonRepository.addListitem(pokemon);
 
-    if (pokemonHeight >= 2) {
-        document.write(
-            '<p>' + pokemonName + '' +'(height: ' + pokemonHeight + ')' +
-            ' - Thats a big one!' +
-            '</p>'
-        )
-    }
-    else {
-        document.write(
-            '<p>' + pokemonName + '' +'(height: ' + pokemonHeight + ')' +
-            ' - Thats pretty small' +
-            '</p>'
-        )
-    };
 };
 
-// p
-
-       
-    //  if(pokemonList[i].height < 2){
-   //     reaction = "oh thats cute! <br />" //reaction height when the pokemon height is less than 2m
-    //}   else if (pokemonHeight > 2 && pokemonHeight <= 4){
-      //  reaction = "This one is big <br />"; // reaction when height is between 2m and 4m   
-    //} else {
-      //  reaction = "That's not fitting inside <br />"; // reaction if height is larger than 4m
-    //}
-        //document.write(
-        //(pokemonList[i].name + " ( " + "height: " + pokemonList[i].height + ") - " + reaction <br />"); //sending HTML the pokemon's name, height and reaction 
-    // 
-    //console.log(
-        //pokemonName +
-        //'' +
-        //'(Height: ' +
-        //pokemonheight +
-       // ')' +
-        // " - Thats a big one!"}
-    //}
