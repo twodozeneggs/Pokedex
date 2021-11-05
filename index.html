@@ -1,13 +1,43 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pokedex</title>
-    <link rel="script.js" href="styles.css" />
-  </head>
-  <body>
-    <ul class="pokemon-list"></ul>
-    <script src="script.js"></script>
-  </body>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Pokedex</title>
+  <meta name="viewport" content="width=device-width, intial-scale=1.0">
+  <link rel="stylesheet" href="pagestyle.css">
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="script.js"> -->
+</head>
+<body>
+  <div class="page">
+<header>
+  <nav class="nav-bar">
+    <input type="checkbox" id="check">
+    <label for="check">
+      <img src="../img/icon/bars-solid.svg" alt="menu" id="btn">
+      <img src="../img/icon/times-solid.svg" alt="cancel" id="cancel">
+    </label>
+    <img src="../img/pokemon-logo.png" alt="pokemon-logo" class="logo">
+    <ul class="nav-bar-list">
+          <li class="nav-bar-item"> <a href="#">Home    </a></li>
+          <li class="nav-bar-item"> <a href="#">About   </a></li>
+          <li class="nav-bar-item"> <a href="#">Services</a></li>
+          <li class="nav-bar-item"> <a href="#">Contact </a></li>
+          <li class="nav-bar-item"> <a href="#">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div id="modal-container"></div>
+  <ul class="pokemon-list"></ul>
+</main>
+<footer>
+
+</footer>
+</div>
+
+<script src="promise-polyfill.js"></script>
+<script src="fetch.umd.js"></script>
+<script src="script.js"></script>
+</body>
 </html>
