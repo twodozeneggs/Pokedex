@@ -8,7 +8,7 @@ let pokemonRepository = (function () {
     modal.classList.add('modal');
     modal.classList.add(type+'-pokemon');
     let closeButtonElement = document.createElement('button');
-    closeButtonElement.classList.add('modal-close');
+    closeButtonElement.classList.add('btn');
     closeButtonElement.innerText = 'X';
     closeButtonElement.addEventListener('click', hideModal);
 
@@ -112,7 +112,8 @@ let pokemonRepository = (function () {
       let listItem = document.createElement('li');
       let button = document.createElement('button');
       button.innerText = pokemon.name;
-      button.classList.add('pokemon-Button-Style');
+      button.classList.add('pokemon-Button-Style','btn','btn-primary');
+      listItem.classList.add('group-list-item');
       addColor(pokemon, button);
       listItem.appendChild(button);
       pokemonListElement.appendChild(listItem);
