@@ -1,2 +1,2 @@
 # Pokedex
-small pokedex
+An excerise to create a wonderful, colourful small pokedex which surprisingly fulfilled a childhood dream of mine to work with pokemon in an academic/professional capacity. INcluding interactive feaures, a drop down menu and animations that bring it to life. All coded by me and proud of it. 
