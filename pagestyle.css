@@ -20,7 +20,7 @@ body,
 
 body{
   font-family: Amaranth, sans-serif;
-  background-image: url("../img/pokemon-background.png");
+  background-image: url("./img/pokemon-background.png");
   background-attachment: fixed;
 }
 
